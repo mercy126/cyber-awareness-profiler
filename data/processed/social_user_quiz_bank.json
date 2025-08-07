@@ -1,0 +1,236 @@
+{
+  "社交活跃者": [
+    {
+      "id": "s1",
+      "question": "Do you set different passwords for each social media platform?",
+      "type": "single",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes",
+      "topic": "Password management",
+      "weight":1.0
+    },
+    {
+      "id": "s2",
+      "question": "Have you ever used a password manager (such as 1Password or Bitwarden)?",
+      "type": "single",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes",
+      "topic": "Password management",
+      "weight":1.0
+    },
+    {
+      "id": "s3",
+      "question": "Do you regularly change your social media account passwords?",
+      "type": "single",
+      "options": [
+        "Yes, regularly",
+        "Sometimes",
+        "No, rarely or never"
+      ],
+      "answer": "Yes, regularly",
+      "topic": "Password management",
+      "weight":1.0
+    },
+    {
+      "id": "s4",
+      "question": "Have you ever enabled two-step verification for your WeChat/Weibo account?",
+      "type": "single",
+      "options": [
+        "Open",
+        "Not Open"
+      ],
+      "answer": "Open",
+      "topic": "2FA authentication",
+      "weight":1.0
+    },
+    {
+      "id": "s5",
+      "question": "Do you know how to set up two-factor authentication (verification code app) for multiple platforms?",
+      "type": "single",
+      "options": [
+        "Understand",
+        "Not understand"
+      ],
+      "answer": "Understand",
+      "topic": "2FA authentication",
+      "weight":1.0
+    },
+    {
+      "id": "s6",
+      "question": "Is your social media account linked to a phone number or email?",
+      "type": "single",
+      "options": [
+        "All bound",
+        "Only bind one of them",
+        "Not bound at all"
+      ],
+      "answer": "All bound",
+      "topic": "2FA authentication",
+      "weight":1.0
+    },
+    {
+      "id": "s7",
+      "question": "Can you identify the phishing features in the 'friend borrowing money' scam?",
+      "type": "single",
+      "options": [
+        "Yes, I can",
+        "No, I can't"
+      ],
+      "answer": "YEs, I can",
+      "topic": "Phishing Awareness",
+      "weight":1.0
+    },
+    {
+    "id": "s8",
+    "question": "Have you ever clicked on suspicious links sent by strangers?",
+    "type": "single",
+    "options": [
+      "No, rarely or never",
+      "Yes, I have"
+    ],
+    "answer": "No, rarely or never",
+    "topic": "Phishing Awareness",
+    "weight": 1.0
+    },
+    {
+    "id": "s9",
+    "question": "Which of the following have you received? (Multiple choices)",
+    "type": "multi",
+    "options": [
+      "Phishing text messages",
+      "Fake (spoofed) links",
+      "Prize-winning notifications",
+      "None of the above"
+    ],
+    "answer": [
+      "Phishing text messages",
+      "Fake (spoofed) links",
+      "Prize-winning notifications"
+    ],
+    "topic": "Phishing Awareness",
+    "weight": 1.0
+    },
+    {
+    "id": "s10",
+    "question": "Do you think the risk of your social media account being hacked has a significant impact on you?",
+    "type": "single",
+    "options": [
+      "Yes, a significant impact",
+      "Some impact",
+      "No impact"
+    ],
+    "answer": "Yes, a significant impact",
+    "topic": "Security Attitude",
+    "weight": 1.0
+    },
+    {
+    "id": "s11",
+    "question": "Do you think configuring privacy settings is troublesome?",
+    "type": "single",
+    "options": [
+      "Not troublesome",
+      "A bit troublesome",
+      "Very troublesome"
+    ],
+    "answer": "Not troublesome",
+    "topic": "Security Attitude",
+    "weight": 1.0
+    },
+    {
+    "id": "s12",
+    "question": "Are you willing to understand how to manage social media accounts more securely?",
+    "type": "single",
+    "options": [
+      "Willing",
+      "Not interested"
+    ],
+    "answer": "Willing",
+    "topic": "Security Attitude",
+    "weight": 1.0
+    },
+    {
+    "id": "s13",
+    "question": "Have you ever set your Moments/Weibo posts to 'Friends Only'?",
+    "type": "single",
+    "options": [
+      "Yes, I have",
+      "Never"
+    ],
+    "answer": "Yes, I have",
+    "topic": "Privacy Control",
+    "weight": 1.0
+    },
+    {
+    "id": "s14",
+    "question": "Do you understand how to restrict strangers from viewing your profile?",
+    "type": "single",
+    "options": [
+      "Yes, I understand",
+      "No, I don't understand"
+    ],
+    "answer": "Yes, I understand",
+    "topic": "Privacy Control",
+    "weight": 1.0
+    },
+    {
+    "id": "s15",
+    "question": "Do you regularly check privacy settings on social media platforms?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Privacy Control",
+    "weight": 1.0
+    },
+    {
+    "id": "s16",
+    "question": "Are you aware that your posts might be recommended to non-friends by the platform?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Content Visibility Awareness",
+    "weight": 1.0
+    },
+    {
+    "id": "s17",
+    "question": "Have you ever set the visibility scope for your posts or profile?",
+    "type": "single",
+    "options": [
+      "Regularly",
+      "Occasionally",
+      "No, rarely or never"
+    ],
+    "answer": "Regularly",
+    "topic": "Content Visibility Awareness",
+    "weight": 1.0
+    },
+    {
+    "id": "s18",
+    "question": "What kind of content do you post on social media? (Multiple choices)",
+    "type": "multi",
+    "options": [
+      "Personal photos",
+      "Location information",
+      "Work-related screenshots",
+      "Contact information",
+      "I don't post anything"
+    ],
+    "answer": [
+      "I don't post anything"
+    ],
+    "topic": "Content Visibility Awareness",
+    "weight": 1.0
+    }
+  ]
+}

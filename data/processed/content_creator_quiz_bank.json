@@ -1,0 +1,223 @@
+{
+  "内容创作者": [
+    {
+      "id": "c1",
+      "question": "Do you use different passwords for different content platforms?",
+      "type": "single",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes",
+      "topic": "Password Management",
+      "weight": 1.0
+    },
+    {
+      "id": "c2",
+      "question": "Have you ever used a password manager (e.g., 1Password, browser password saving)?",
+      "type": "single",
+      "options": [
+        "Yes, I have",
+        "No, I haven't"
+      ],
+      "answer": "Yes, I have",
+      "topic": "Password Management",
+      "weight": 1.0
+    },
+    {
+      "id": "c3",
+      "question": "Do you change your content platform passwords at least quarterly?",
+      "type": "single",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes",
+      "topic": "Password Management",
+      "weight": 1.0
+    },
+    {
+      "id": "c4",
+      "question": "Have you enabled two-factor authentication (2FA) on your content platform accounts?",
+      "type": "single",
+      "options": [
+        "Enabled",
+        "Not enabled"
+      ],
+      "answer": "Enabled",
+      "topic": "2FA Authentication",
+      "weight": 1.0
+    },
+    {
+      "id": "c5",
+      "question": "Are you familiar with using 2FA apps (e.g., Authy, Google Authenticator)?",
+      "type": "single",
+      "options": [
+        "Yes, I'm familiar",
+        "No, I'm not familiar"
+      ],
+      "answer": "Yes, I'm familiar",
+      "topic": "2FA Authentication",
+      "weight": 1.0
+    },
+    {
+      "id": "c6",
+      "question": "Have you enabled login notification features on your accounts?",
+      "type": "single",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes",
+      "topic": "2FA Authentication",
+      "weight": 1.0
+    },
+    {
+      "id": "c7",
+      "question": "Have you ever received fake messages or emails impersonating the platform?",
+      "type": "single",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes",
+      "topic": "Phishing Awareness",
+      "weight": 1.0
+    },
+    {
+      "id": "c8",
+      "question": "Can you identify phishing emails disguised as event invitations?",
+      "type": "single",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes",
+      "topic": "Phishing Awareness",
+      "weight": 1.0
+    },
+    {
+      "id": "c9",
+      "question": "Have you ever clicked on unknown links or files?",
+      "type": "single",
+      "options": [
+        "No",
+        "Yes"
+      ],
+      "answer": "No",
+      "topic": "Phishing Awareness",
+      "weight": 1.0
+    },
+    {
+      "id": "c10",
+      "question": "Do you back up your original content (images/videos) to the cloud or a hard drive?",
+      "type": "single",
+      "options": [
+        "Regularly",
+        "Occasionally",
+        "Never"
+      ],
+      "answer": "Regularly",
+      "topic": "Content Backup",
+      "weight": 1.0
+    },
+    {
+      "id": "c11",
+      "question": "Do you use multiple backup locations (e.g., cloud + external hard drive)?",
+      "type": "single",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes",
+      "topic": "Content Backup",
+      "weight": 1.0
+    },
+    {
+      "id": "c12",
+      "question": "Does your backup include materials, scripts, and final products?",
+      "type": "single",
+      "options": [
+        "All included",
+        "Partially included",
+        "Not included"
+      ],
+      "answer": "All included",
+      "topic": "Content Backup",
+      "weight": 1.0
+    },
+    {
+      "id": "c13",
+      "question": "Are you familiar with the platform’s copyright policies or infringement complaint procedures?",
+      "type": "single",
+      "options": [
+        "Yes, I'm familiar",
+        "No, I'm not familiar"
+      ],
+      "answer": "Yes, I'm familiar",
+      "topic": "Copyright Protection",
+      "weight": 1.0
+    },
+    {
+      "id": "c14",
+      "question": "Do you credit sources or declare originality before publishing content?",
+      "type": "single",
+      "options": [
+        "Regularly",
+        "Occasionally",
+        "Never"
+      ],
+      "answer": "Regularly",
+      "topic": "Copyright Protection",
+      "weight": 1.0
+    },
+    {
+      "id": "c15",
+      "question": "Have you used tools to check the copyright status of images, audio, or video?",
+      "type": "single",
+      "options": [
+        "Yes, I have",
+        "No, I haven't"
+      ],
+      "answer": "Yes, I have",
+      "topic": "Copyright Protection",
+      "weight": 1.0
+    },
+    {
+      "id": "c16",
+      "question": "Have you set who can view your published content?",
+      "type": "single",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "answer": "Yes",
+      "topic": "Content Sharing Permissions",
+      "weight": 1.0
+    },
+    {
+      "id": "c17",
+      "question": "Have you used draft or preview permission features on the platform?",
+      "type": "single",
+      "options": [
+        "Yes, I have",
+        "No, I haven't"
+      ],
+      "answer": "Yes, I have",
+      "topic": "Content Sharing Permissions",
+      "weight": 1.0
+    },
+    {
+      "id": "c18",
+      "question": "Are you aware of how the visibility of your posts can affect account security?",
+      "type": "single",
+      "options": [
+        "Yes, I'm aware",
+        "No, I haven't noticed"
+      ],
+      "answer": "Yes, I'm aware",
+      "topic": "Content Sharing Permissions",
+      "weight": 1.0
+    }
+  ]
+}

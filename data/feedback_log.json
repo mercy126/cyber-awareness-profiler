@@ -1,0 +1,26 @@
+[
+  {
+    "submitted_at": "2025-08-05 12:21:40",
+    "user_type": "remote_worker",
+    "blind_spots": "Password Management,Phishing Awareness",
+    "comment": "",
+    "feedback": [
+      {
+        "recommendation": "Improve your password management by using a password manager to generate and store complex passwords.",
+        "user_rating": "helpful"
+      },
+      {
+        "recommendation": "Increase your awareness of phishing attacks by learning to recognize common phishing strategies.",
+        "user_rating": "helpful"
+      },
+      {
+        "recommendation": "Enable two-factor authentication (2FA) on all your accounts to add an extra layer of security.",
+        "user_rating": "helpful"
+      },
+      {
+        "recommendation": "Regularly review and adjust your cloud collaboration permissions to ensure sensitive data is only accessible to authorized individuals.",
+        "user_rating": "helpful"
+      }
+    ]
+  }
+]

@@ -1,0 +1,224 @@
+{
+  "混合型用户": [
+  {
+    "id": "m1",
+    "question": "Do you use the same password across different platforms?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "No",
+    "topic": "Password Management",
+    "weight": 1.0
+  },
+  {
+    "id": "m2",
+    "question": "Do you use a password manager to store passwords for different platforms?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Password Management",
+    "weight": 1.0
+  },
+  {
+    "id": "m3",
+    "question": "Are you aware of websites that mimic official login pages?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Password Management",
+    "weight": 1.0
+  },
+  {
+    "id": "m4",
+    "question": "Have you enabled 2FA on your social, content creation, and work accounts?",
+    "type": "single",
+    "options": [
+      "Yes, all",
+      "Some of them",
+      "No"
+    ],
+    "answer": "Yes, all",
+    "topic": "2FA Authentication",
+    "weight": 1.0
+  },
+  {
+    "id": "m5",
+    "question": "Are you familiar with using 2FA apps (e.g., Google Authenticator)?",
+    "type": "single",
+    "options": [
+      "Familiar",
+      "Not familiar"
+    ],
+    "answer": "Familiar",
+    "topic": "2FA Authentication",
+    "weight": 1.0
+  },
+  {
+    "id": "m6",
+    "question": "Have you linked your phone or email to receive verification codes?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "2FA Authentication",
+    "weight": 1.0
+  },
+  {
+    "id": "m7",
+    "question": "Do you believe you're unlikely to become a target of cyberattacks?",
+    "type": "single",
+    "options": [
+      "Disagree",
+      "Somewhat agree",
+      "Strongly agree"
+    ],
+    "answer": "Disagree",
+    "topic": "Security Attitude",
+    "weight": 1.0
+  },
+  {
+    "id": "m8",
+    "question": "Do you regularly check your accounts, privacy settings, or backups?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "Occasionally",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Security Attitude",
+    "weight": 1.0
+  },
+  {
+    "id": "m9",
+    "question": "Are you willing to proactively learn about digital protection?",
+    "type": "single",
+    "options": [
+      "Willing",
+      "Not willing"
+    ],
+    "answer": "Willing",
+    "topic": "Security Attitude",
+    "weight": 1.0
+  },
+  {
+    "id": "m10",
+    "question": "Do you set visibility permissions for content on different platforms?",
+    "type": "single",
+    "options": [
+      "Regularly",
+      "Occasionally",
+      "Never"
+    ],
+    "answer": "Regularly",
+    "topic": "Content Sharing Permissions",
+    "weight": 1.0
+  },
+  {
+    "id": "m11",
+    "question": "Are you aware of what content is easily scraped or reposted?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Content Sharing Permissions",
+    "weight": 1.0
+  },
+  {
+    "id": "m12",
+    "question": "Have you ever set access codes or limited audiences for your content?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Content Sharing Permissions",
+    "weight": 1.0
+  },
+  {
+    "id": "m13",
+    "question": "Do you set file permissions when using collaboration platforms (e.g., Docs, Notion)?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Cloud Collaboration Permissions",
+    "weight": 1.0
+  },
+  {
+    "id": "m14",
+    "question": "Are you aware of the risks of editors being able to reshare files?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Cloud Collaboration Permissions",
+    "weight": 1.0
+  },
+  {
+    "id": "m15",
+    "question": "Do you regularly review sharing permissions on team content?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Cloud Collaboration Permissions",
+    "weight": 1.0
+  },
+  {
+    "id": "m16",
+    "question": "Have you checked how many platforms have your phone number or email?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Data Breach Awareness",
+    "weight": 1.0
+  },
+  {
+    "id": "m17",
+    "question": "Do you regularly use tools like 'Have I Been Pwned' to check for data leaks?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "Never"
+    ],
+    "answer": "Yes",
+    "topic": "Data Breach Awareness",
+    "weight": 1.0
+  },
+  {
+    "id": "m18",
+    "question": "Do you use a dedicated email address for important accounts?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Data Breach Awareness",
+    "weight": 1.0
+  }
+]
+}

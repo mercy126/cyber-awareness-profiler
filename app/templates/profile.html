@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cybersecurity Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 860px;
+      margin: auto;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+    h3 {
+      color: #34495e;
+    }
+    .section {
+      background: white;
+      padding: 24px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .blind {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+    .chart-container {
+      max-width: 600px;
+      margin-top: 30px;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: underline;
+    }
+    .recommendation-card {
+      border-left: 5px solid #3498db;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      background-color: #f7faff;
+      border-radius: 6px;
+    }
+    .copy-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 15px;
+      font-size: 0.95em;
+      color: white;
+      background: #2ecc71;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .copy-btn:hover {
+      background: #27ae60;
+    }
+
+    .priority-level {
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .p1 { color: white; background-color: #e74c3c; }
+    .p2 { color: white; background-color: #e67e22; }
+    .p3 { color: white; background-color: #f1c40f; }
+    .p4 { color: white; background-color: #2ecc71; }
+    .p5 { color: white; background-color: #95a5a6; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🎯 Personalized Cybersecurity Profile</h2>
+
+    <div class="section">
+      <h3>👤 User Type</h3>
+      <p>{{ profile.user_type }}</p>
+
+      <h3>🧠 Security Awareness Analysis</h3>
+      <p>Attitude Level: <strong>{{ profile.attitude_level }}</strong></p>
+      <p>Risk Tendency: <strong>{{ profile.risk_bias }}</strong></p>
+
+      {% if profile.attitude_level == "较高" %}
+        <p style="color:green;">👏 Your awareness is strong. You exhibit good cybersecurity habits.</p>
+      {% elif profile.attitude_level == "一般" %}
+        <p style="color:orange;">⚠️ Your awareness is average. We recommend strengthening your knowledge.</p>
+      {% else %}
+        <p style="color:red;">❗ Your awareness level is low. Immediate attention is recommended.</p>
+      {% endif %}
+    </div>
+
+    <div class="section chart-container">
+      <h3>📊 Radar Chart of Cyber Knowledge</h3>
+      <canvas id="radarChart" width="400" height="400"></canvas>
+    </div>
+
+    <div class="section">
+      <h3>🔍 Detected Blind Spots</h3>
+      {% if profile.blind_spots %}
+        <p>Your score was low in the following domains. Please focus on improving these areas:</p>
+        <ul>
+          {% for topic in profile.blind_spots %}
+            <li><span class="blind">{{ topic }}</span></li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>👏 Your cybersecurity knowledge is well-rounded. No major blind spots detected.</p>
+      {% endif %}
+    </div>
+
+    <div class="section">
+      <h3>🧾 System Recommendations (AI Generated)</h3>
+
+      {% if profile.summary %}
+        <p><strong>📝 Summary:</strong> {{ profile.summary }}</p>
+      {% endif %}
+
+      {% if profile.recommendations %}
+        <button class="copy-btn" onclick="copyAll()">📋 Copy All Recommendations</button>
+        <div id="rec-container">
+          {% for rec in profile.recommendations %}
+            <div class="recommendation-card">
+              <p><strong>Recommendation:</strong> {{ rec.text }}</p>
+              {% if rec.reason %}
+                <p><strong>Reason:</strong> {{ rec.reason }}</p>
+              {% endif %}
+              {% if rec.priority %}
+                <p><strong>⏱️ Priority:</strong>
+                  <span class="priority-level p{{ rec.priority }}">{{ rec.priority }}</span>
+                </p>
+              {% endif %}
+              {% if rec.link %}
+                <p><strong>🔗 Resource:</strong>
+                  <a href="{{ rec.link }}" target="_blank">
+                    {{ rec.link | replace('https://', '') }}
+                  </a>
+                </p>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p>Recommendations are currently being generated…</p>
+      {% endif %}
+    </div>
+
+    <!-- ✅ 一键导出 PDF 按钮区域（放在页面底部） -->
+    <div class="section" style="text-align: center;">
+      <form id="pdfForm" method="POST" action="/export_pdf" target="_blank">
+        <input type="hidden" name="profile_json" id="profileInput">
+        <input type="hidden" name="chart_img" id="chartInput">
+        <button class="copy-btn" type="submit" onclick="preparePDF()">📄 Export PDF Report</button>
+      </form>
+    </div>
+
+    <form action="/feedback" method="POST">
+  <input type="hidden" name="profile_json" value='{{ profile | tojson }}'>
+  <button type="submit">📝 I would like to give feedback on this recommendation</button>
+</form>
+
+
+  </div>
+
+  <script>
+    const labels = JSON.parse('{{ profile.scores.keys() | list | tojson | safe }}');
+    const data = JSON.parse('{{ profile.scores.values() | list | tojson | safe }}');
+
+    const ctx = document.getElementById('radarChart').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Knowledge Score (0–1)',
+          data: data,
+          fill: true,
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          pointBackgroundColor: 'rgba(54, 162, 235, 1)'
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          r: {
+            min: 0,
+            max: 1,
+            ticks: { stepSize: 0.2 }
+          }
+        },
+        plugins: { legend: { display: false } }
+      }
+    });
+
+    function copyAll() {
+      const text = Array.from(document.querySelectorAll('.recommendation-card'))
+        .map(card => card.innerText.trim()).join('\n\n');
+      navigator.clipboard.writeText(text);
+      alert('✅ All recommendations copied!');
+    }
+
+    function preparePDF() {
+      const chartCanvas = document.getElementById('radarChart');
+      const chartImg = chartCanvas.toDataURL('image/png');  // base64 chart image
+
+      const profileData = JSON.parse('{{ profile | tojson | safe }}');
+      document.getElementById('profileInput').value = JSON.stringify(profileData);
+      document.getElementById('chartInput').value = chartImg;
+    }
+  </script>
+</body>
+</html>
+

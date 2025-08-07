@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Cyber Behavior Questionnaire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f2f4f8;
+      margin: 0;
+      padding: 30px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    h2, h3 {
+      color: #2c3e50;
+    }
+    form input[type="submit"] {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form input[type="submit"]:hover {
+      background-color: #2980b9;
+    }
+    p { margin-bottom: 8px; }
+    hr { margin: 25px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>📋 Cyber Behavior Classification Questionnaire</h2>
+    <form method="post" action="/submit">
+
+<h3>Social Media Behavior</h3>
+<p>1. How much time do you spend on social media daily?<br>
+<small>e.g., WeChat Moments, Weibo, Xiaohongshu, TikTok</small></p>
+<input type="radio" name="q1" value="A"> Almost never<br>
+<input type="radio" name="q1" value="B"> Less than 1 hour<br>
+<input type="radio" name="q1" value="C"> 1–3 hours<br>
+<input type="radio" name="q1" value="D"> More than 3 hours<br>
+
+<p>2. What do you usually do on social media? (Multiple choice)<br>
+<small>e.g., browsing, liking, posting, adding friends</small></p>
+<input type="checkbox" name="q2" value="browse"> Browse content<br>
+<input type="checkbox" name="q2" value="like"> Like & comment<br>
+<input type="checkbox" name="q2" value="post"> Post content<br>
+<input type="checkbox" name="q2" value="add"> Add friends / interact<br>
+<input type="checkbox" name="q2" value="none"> Rarely do anything<br>
+
+<p>3. How many groups/channels are you part of?<br>
+<small>e.g., WeChat, QQ groups, Discord, etc.</small></p>
+<input type="radio" name="q3" value="A"> None<br>
+<input type="radio" name="q3" value="B"> 1–5<br>
+<input type="radio" name="q3" value="C"> 6–15<br>
+<input type="radio" name="q3" value="D"> More than 15<br>
+
+<p>4. Do you make new friends or join interest groups via social media?</p>
+<input type="radio" name="q4" value="A"> Never<br>
+<input type="radio" name="q4" value="B"> Occasionally<br>
+<input type="radio" name="q4" value="C"> Frequently<br>
+
+<p>5. Do you post the same content across multiple platforms?</p>
+<input type="radio" name="q5" value="A"> Never<br>
+<input type="radio" name="q5" value="B"> Occasionally<br>
+<input type="radio" name="q5" value="C"> Often<br>
+
+<h3>Content Creation</h3>
+<p>6. Do you regularly create content? <br><small>e.g., writing, video, podcasting, drawing</small></p>
+<input type="radio" name="q6" value="A"> Never<br>
+<input type="radio" name="q6" value="B"> Occasionally<br>
+<input type="radio" name="q6" value="C"> Weekly or more<br>
+
+<p>7. What tools have you used for content creation? (Multiple choice)</p>
+<input type="checkbox" name="q7" value="ps"> Canva / Photoshop<br>
+<input type="checkbox" name="q7" value="video"> Editing software (e.g., Premiere)<br>
+<input type="checkbox" name="q7" value="editor"> Blog or publishing editors<br>
+<input type="checkbox" name="q7" value="none"> None<br>
+
+<p>8. Do you prepare templates or scripts in advance?</p>
+<input type="radio" name="q8" value="A"> Never<br>
+<input type="radio" name="q8" value="B"> Sometimes<br>
+<input type="radio" name="q8" value="C"> Often<br>
+
+<p>9. Do you manage multiple creator accounts?</p>
+<input type="radio" name="q9" value="A"> No<br>
+<input type="radio" name="q9" value="B"> 1–2 accounts<br>
+<input type="radio" name="q9" value="C"> More than 2<br>
+
+<p>10. Have you created a portfolio or link page?</p>
+<input type="radio" name="q10" value="yes"> Yes<br>
+<input type="radio" name="q10" value="no"> No<br>
+
+<h3>Cloud Work / Document Behavior</h3>
+<p>11. Do you frequently use video conferencing tools?</p>
+<input type="radio" name="q11" value="A"> Never<br>
+<input type="radio" name="q11" value="B"> Occasionally<br>
+<input type="radio" name="q11" value="C"> Frequently<br>
+
+<p>12. Do you collaborate using online documents?</p>
+<input type="radio" name="q12" value="yes"> Yes<br>
+<input type="radio" name="q12" value="no"> No<br>
+
+<p>13. How many files do you handle per week?</p>
+<input type="radio" name="q13" value="A"> Less than 3<br>
+<input type="radio" name="q13" value="B"> 3–10<br>
+<input type="radio" name="q13" value="C"> More than 10<br>
+
+<p>14. Where do you primarily store your files?</p>
+<input type="radio" name="q14" value="A"> Local folders<br>
+<input type="radio" name="q14" value="B"> Cloud storage<br>
+<input type="radio" name="q14" value="C"> Enterprise platforms<br>
+
+<p>15. Do you manage multiple account/file permissions?</p>
+<input type="radio" name="q15" value="yes"> Yes<br>
+<input type="radio" name="q15" value="no"> No<br>
+
+<h3>Browsing Behavior</h3>
+<p>16. What are your main online activities? (Multiple choice)</p>
+<input type="checkbox" name="q16" value="read"> Reading news/forums<br>
+<input type="checkbox" name="q16" value="video"> Watching short videos<br>
+<input type="checkbox" name="q16" value="learn"> Searching tutorials<br>
+<input type="checkbox" name="q16" value="chat"> Chatting with friends<br>
+<input type="checkbox" name="q16" value="work"> Creating or working<br>
+
+<p>17. Do you get news from multiple platforms?</p>
+<input type="radio" name="q17" value="yes"> Yes<br>
+<input type="radio" name="q17" value="no"> No<br>
+
+<p>18. Do you usually browse without liking or commenting?</p>
+<input type="radio" name="q18" value="yes"> Yes<br>
+<input type="radio" name="q18" value="no"> No<br>
+
+<p>19. Do you often click on recommended links?</p>
+<input type="radio" name="q19" value="yes"> Yes<br>
+<input type="radio" name="q19" value="no"> No<br>
+
+<p>20. Do you save or forward useful content?</p>
+<input type="radio" name="q20" value="yes"> Yes<br>
+<input type="radio" name="q20" value="no"> No<br>
+
+<h3>Mixed Use & Self-Perception</h3>
+<p>21. I use different platforms for different purposes (1–5)</p>
+<input type="number" name="q21" min="1" max="5"><br>
+
+<p>22. I often use multiple devices for digital activities (1–5)</p>
+<input type="number" name="q22" min="1" max="5"><br>
+
+<p>23. My digital behavior is hard to categorize</p>
+<input type="radio" name="q23" value="A"> Disagree<br>
+<input type="radio" name="q23" value="B"> Somewhat agree<br>
+<input type="radio" name="q23" value="C"> Strongly agree<br>
+
+<p>24. I engage in social/media/work/browsing activities (1–5)</p>
+<input type="number" name="q24" min="1" max="5"><br>
+
+<p>25. Which of the following best describes your digital lifestyle?</p>
+<input type="radio" name="q25" value="A"> Primarily work-related<br>
+<input type="radio" name="q25" value="B"> Mostly social<br>
+<input type="radio" name="q25" value="C"> Focused on content creation<br>
+<input type="radio" name="q25" value="D"> Passive browsing<br>
+<input type="radio" name="q25" value="E"> Mixed / difficult to define<br>
+
+<h3>Cybersecurity Attitudes (Self-Assessment)</h3>
+<p style="color:gray">These questions help us understand your perception of online risks and willingness to engage in protection.</p>
+
+<p>26. Cybersecurity doesn't apply to me because I'm not a target.</p>
+<select name="q26" required>
+  <option value="1">Strongly disagree</option>
+  <option value="2">Disagree</option>
+  <option value="3">Neutral</option>
+  <option value="4">Agree</option>
+  <option value="5">Strongly agree</option>
+</select><br><br>
+
+<p>27. My devices are already secure enough—I don't need more settings.</p>
+<select name="q27" required>
+  <option value="1">Strongly disagree</option>
+  <option value="2">Disagree</option>
+  <option value="3">Neutral</option>
+  <option value="4">Agree</option>
+  <option value="5">Strongly agree</option>
+</select><br><br>
+
+<p>28. Even if my account is hacked, it's not a big deal.</p>
+<select name="q28" required>
+  <option value="1">Strongly disagree</option>
+  <option value="2">Disagree</option>
+  <option value="3">Neutral</option>
+  <option value="4">Agree</option>
+  <option value="5">Strongly agree</option>
+</select><br><br>
+
+<p>29. Settings are too complicated—I prefer the default.</p>
+<select name="q29" required>
+  <option value="1">Strongly disagree</option>
+  <option value="2">Disagree</option>
+  <option value="3">Neutral</option>
+  <option value="4">Agree</option>
+  <option value="5">Strongly agree</option>
+</select><br><br>
+
+<p>30. I’m willing to learn practical security skills.</p>
+<select name="q30" required>
+  <option value="1">Strongly disagree</option>
+  <option value="2">Disagree</option>
+  <option value="3">Neutral</option>
+  <option value="4">Agree</option>
+  <option value="5">Strongly agree</option>
+</select><br><br>
+
+ <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+{
+  "信息浏览者": 
+  [
+  {
+    "id": "b1",
+    "question": "Do you use the same password across multiple platforms?",
+    "type": "single",
+    "options": [
+      "No",
+      "Yes"
+    ],
+    "answer": "No",
+    "topic": "Password Management",
+    "weight": 1.0
+  },
+  {
+    "id": "b2",
+    "question": "Have you enabled your browser's auto-save password feature?",
+    "type": "single",
+    "options": [
+      "No",
+      "Yes"
+    ],
+    "answer": "Yes",
+    "topic": "Password Management",
+    "weight": 1.0
+  },
+  {
+    "id": "b3",
+    "question": "Are you aware of websites disguised as official login pages?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "Not really"
+    ],
+    "answer": "Yes",
+    "topic": "Password Management",
+    "weight": 1.0
+  },
+  {
+    "id": "b4",
+    "question": "Can you identify phishing links hidden in online ads?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Phishing Awareness",
+    "weight": 1.0
+  },
+  {
+    "id": "b5",
+    "question": "Do you click on lottery or recommendation pages from unknown sources?",
+    "type": "single",
+    "options": [
+      "Never",
+      "Occasionally",
+      "Frequently"
+    ],
+    "answer": "Never",
+    "topic": "Phishing Awareness",
+    "weight": 1.0
+  },
+  {
+    "id": "b6",
+    "question": "Are you familiar with the basic signs of web hijacking?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Phishing Awareness",
+    "weight": 1.0
+  },
+  {
+    "id": "b7",
+    "question": "Do you think browsing the web poses little or no risk?",
+    "type": "single",
+    "options": [
+      "Disagree",
+      "Somewhat agree",
+      "Strongly agree"
+    ],
+    "answer": "Disagree",
+    "topic": "Security Attitude",
+    "weight": 1.0
+  },
+  {
+    "id": "b8",
+    "question": "Do you actively configure your browser’s security settings?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "Occasionally",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Security Attitude",
+    "weight": 1.0
+  },
+  {
+    "id": "b9",
+    "question": "Are you willing to install anti-phishing extensions or ad blockers?",
+    "type": "single",
+    "options": [
+      "Willing",
+      "Unwilling"
+    ],
+    "answer": "Willing",
+    "topic": "Security Attitude",
+    "weight": 1.0
+  },
+  {
+    "id": "b10",
+    "question": "Do you check if the source of information is official or authoritative?",
+    "type": "single",
+    "options": [
+      "Frequently",
+      "Occasionally",
+      "Never"
+    ],
+    "answer": "Frequently",
+    "topic": "Source Evaluation",
+    "weight": 1.0
+  },
+  {
+    "id": "b11",
+    "question": "Do you know how to identify fake news or clickbait headlines?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Source Evaluation",
+    "weight": 1.0
+  },
+  {
+    "id": "b12",
+    "question": "Have you ever cross-checked the consistency of information across multiple platforms?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Source Evaluation",
+    "weight": 1.0
+  },
+  {
+    "id": "b13",
+    "question": "Have you ever disabled personalized ad recommendations or tracking features?",
+    "type": "single",
+    "options": [
+      "Yes, I have",
+      "No, I haven't"
+    ],
+    "answer": "Yes, I have",
+    "topic": "Ad Tracking Protection",
+    "weight": 1.0
+  },
+  {
+    "id": "b14",
+    "question": "Are you aware of the risks of cookies and web activity tracking?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Ad Tracking Protection",
+    "weight": 1.0
+  },
+  {
+    "id": "b15",
+    "question": "Have you used browser privacy extensions (e.g., uBlock)?",
+    "type": "single",
+    "options": [
+      "Yes, I have",
+      "No, I haven't"
+    ],
+    "answer": "Yes, I have",
+    "topic": "Ad Tracking Protection",
+    "weight": 1.0
+  },
+  {
+    "id": "b16",
+    "question": "Have you ever used tools to check if your account has been leaked?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Data Breach Awareness",
+    "weight": 1.0
+  },
+  {
+    "id": "b17",
+    "question": "Do you understand the main sources of data breaches?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Data Breach Awareness",
+    "weight": 1.0
+  },
+  {
+    "id": "b18",
+    "question": "Have you ever received spam emails after registering on unknown websites?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Data Breach Awareness",
+    "weight": 1.0
+  }
+  ]
+}

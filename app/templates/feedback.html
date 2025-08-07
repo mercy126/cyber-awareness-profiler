@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback on Your Recommendations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    .rec-box {
+      border: 1px solid #ccc;
+      padding: 10px 15px;
+      margin-bottom: 20px;
+      background-color: #f9f9f9;
+      border-radius: 6px;
+    }
+    .rec-box strong {
+      display: block;
+      font-size: 1.1em;
+      margin-bottom: 5px;
+      color: #34495e;
+    }
+    select {
+      padding: 5px;
+    }
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 1em;
+    }
+    input[type="submit"] {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📝 Feedback on Your Recommendations</h2>
+  <form action="/submit_feedback" method="POST">
+    {% for rec in profile.recommendations %}
+      <div class="rec-box">
+        <strong>{{ loop.index }}. {{ rec.text }}</strong>
+        <label>How would you rate this suggestion?</label><br>
+        <select name="feedback_{{ loop.index }}">
+          <option value="helpful">👍 Helpful</option>
+          <option value="known">👌 Already Known</option>
+          <option value="confusing">❓ Confusing</option>
+          <option value="irrelevant">❌ Not Relevant</option>
+        </select>
+        <input type="hidden" name="recommendation_text_{{ loop.index }}" value="{{ rec.text }}">
+      </div>
+    {% endfor %}
+
+    <div class="rec-box">
+      <label for="comment"><strong>💬 Additional Comments (Optional)</strong></label><br>
+      <textarea name="comment" id="comment" rows="4" placeholder="Write anything you'd like to share..."></textarea>
+    </div>
+
+    <!-- Hidden profile info -->
+    <input type="hidden" name="user_type" value="{{ profile.user_type }}">
+    <input type="hidden" name="blind_spots" value="{{ ','.join(profile.blind_spots) }}">
+    <input type="hidden" name="timestamp" value="{{ profile.timestamp or '' }}">
+    <input type="hidden" name="num_recs" value="{{ profile.recommendations | length }}">
+
+    <input type="submit" value="Submit Feedback">
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+{
+  "云办公者": 
+  [
+  {
+    "id": "w1",
+    "question": "Do you use different passwords for company email and work platforms?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Password Management",
+    "weight": 1.0
+  },
+  {
+    "id": "w2",
+    "question": "Do you save your passwords in browsers or personal notes?",
+    "type": "single",
+    "options": [
+      "Never",
+      "Occasionally",
+      "Frequently"
+    ],
+    "answer": "Never",
+    "topic": "Password Management",
+    "weight": 1.0
+  },
+  {
+    "id": "w3",
+    "question": "Have you set access permissions for shared company or project accounts?",
+    "type": "single",
+    "options": [
+      "Yes, I have",
+      "No, I haven't"
+    ],
+    "answer": "Yes, I have",
+    "topic": "Password Management",
+    "weight": 1.0
+  },
+  {
+    "id": "w4",
+    "question": "Have you enabled 2FA for work tools like Slack or Notion?",
+    "type": "single",
+    "options": [
+      "Enabled",
+      "Not enabled"
+    ],
+    "answer": "Enabled",
+    "topic": "2FA Authentication",
+    "weight": 1.0
+  },
+  {
+    "id": "w5",
+    "question": "Are you familiar with configuring security settings for corporate email?",
+    "type": "single",
+    "options": [
+      "Yes, I'm familiar",
+      "No, I'm not familiar"
+    ],
+    "answer": "Yes, I'm familiar",
+    "topic": "2FA Authentication",
+    "weight": 1.0
+  },
+  {
+    "id": "w6",
+    "question": "Have you enabled device verification for email or work platforms?",
+    "type": "single",
+    "options": [
+      "Enabled",
+      "Not enabled"
+    ],
+    "answer": "Enabled",
+    "topic": "2FA Authentication",
+    "weight": 1.0
+  },
+  {
+    "id": "w7",
+    "question": "Have you ever identified fake collaboration requests from impersonated company accounts?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Phishing Awareness",
+    "weight": 1.0
+  },
+  {
+    "id": "w8",
+    "question": "Have you ever received phishing emails with attachments?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Phishing Awareness",
+    "weight": 1.0
+  },
+  {
+    "id": "w9",
+    "question": "Do you know how to identify fake links in work-related emails?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "Not really"
+    ],
+    "answer": "Yes",
+    "topic": "Phishing Awareness",
+    "weight": 1.0
+  },
+  {
+    "id": "w10",
+    "question": "Have you ever set ‘view/edit only by specific members’ for shared cloud documents?",
+    "type": "single",
+    "options": [
+      "Yes, I have",
+      "No, I haven't"
+    ],
+    "answer": "Yes, I have",
+    "topic": "Cloud Collaboration Permissions",
+    "weight": 1.0
+  },
+  {
+    "id": "w11",
+    "question": "Are you aware of the risks of allowing editors to re-share documents?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Cloud Collaboration Permissions",
+    "weight": 1.0
+  },
+  {
+    "id": "w12",
+    "question": "Do you regularly review access permissions on team-shared files?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Cloud Collaboration Permissions",
+    "weight": 1.0
+  },
+  {
+    "id": "w13",
+    "question": "Have you ever set a password or encryption for sensitive files?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes",
+    "topic": "Sensitive Document Handling",
+    "weight": 1.0
+  },
+  {
+    "id": "w14",
+    "question": "Do you check for internal data before sending documents?",
+    "type": "single",
+    "options": [
+      "Yes",
+      "Not really"
+    ],
+    "answer": "Yes",
+    "topic": "Sensitive Document Handling",
+    "weight": 1.0
+  },
+  {
+    "id": "w15",
+    "question": "Are you familiar with your company’s policy on external sharing of sensitive documents?",
+    "type": "single",
+    "options": [
+      "Yes, I'm familiar",
+      "No, I'm not familiar"
+    ],
+    "answer": "Yes, I'm familiar",
+    "topic": "Sensitive Document Handling",
+    "weight": 1.0
+  },
+  {
+    "id": "w16",
+    "question": "Have you enabled screen lock and remote wipe features on your laptop or phone?",
+    "type": "single",
+    "options": [
+      "Enabled",
+      "Not enabled"
+    ],
+    "answer": "Enabled",
+    "topic": "Device Login Security",
+    "weight": 1.0
+  },
+  {
+    "id": "w17",
+    "question": "Have you ever handled sensitive work content on public devices or Wi-Fi?",
+    "type": "single",
+    "options": [
+      "No",
+      "Occasionally",
+      "Frequently"
+    ],
+    "answer": "No",
+    "topic": "Device Login Security",
+    "weight": 1.0
+  },
+  {
+    "id": "w18",
+    "question": "Can you quickly check the list of devices logged into your account?",
+    "type": "single",
+    "options": [
+      "Yes, I can",
+      "No, I can't"
+    ],
+    "answer": "Yes, I can",
+    "topic": "Device Login Security",
+    "weight": 1.0
+  }
+  ]
+}

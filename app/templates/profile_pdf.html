@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Cybersecurity Profile Report</title>
+  <style>
+    body {
+      font-family: "Helvetica", "Arial", sans-serif;
+      padding: 40px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #34495e;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    ul {
+      padding-left: 1.5em;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+
+    .chart-img {
+      display: block;
+      margin: 20px auto;
+      max-width: 400px;
+      border: 1px solid #ccc;
+    }
+
+    .card {
+      border-left: 5px solid #2980b9;
+      background: #f9fbff;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+    }
+
+    .footer {
+      text-align: right;
+      margin-top: 40px;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Cybersecurity Profile Report</h1>
+
+  <div class="section">
+    <h2>User Type</h2>
+    <p>{{ profile.user_type }}</p>
+  </div>
+
+  <div class="section">
+    <h2>Security Attitude</h2>
+    <p>Level: {{ profile.attitude_level }}</p>
+    <p>Risk Tendency: {{ profile.risk_bias }}</p>
+  </div>
+
+  <div class="section">
+    <h2>Radar Chart</h2>
+    {% if chart_data %}
+      <img class="chart-img" src="{{ chart_data }}">
+    {% else %}
+      <p>[Radar chart unavailable]</p>
+    {% endif %}
+  </div>
+
+  <div class="section">
+    <h2>Knowledge Scores</h2>
+    <ul>
+      {% for k, v in profile.scores.items() %}
+        <li><span class="label">{{ k }}:</span> {{ v }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Blind Spots</h2>
+    {% if profile.blind_spots %}
+      <ul>
+        {% for topic in profile.blind_spots %}
+          <li>{{ topic }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No major blind spots detected.</p>
+    {% endif %}
+  </div>
+
+  <div class="section">
+    <h2>AI Recommendations</h2>
+    {% for rec in profile.recommendations %}
+      <div class="card">
+        <p><strong>{{ loop.index }}. {{ rec.text }}</strong></p>
+        {% if rec.reason %}
+          <p><em>Reason:</em> {{ rec.reason }}</p>
+        {% endif %}
+        {% if rec.priority %}
+          <p><em>Priority:</em> {{ rec.priority }}</p>
+        {% endif %}
+        {% if rec.link %}
+          <p><em>Link:</em> {{ rec.link }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="footer">
+  Generated on: {{ generated_time }}
+  </div>
+</body>
+</html>
+
