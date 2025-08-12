@@ -12,6 +12,14 @@ import os
 
 main = Blueprint('main', __name__)
 
+USER_TYPE_LABELS = {
+    "social_user": "Social User",
+    "content_creator": "Content Creator",
+    "remote_worker": "Remote Worker",
+    "passive_browser": "Passive Browser",
+    "hybrid_user": "Hybrid User",
+}
+
 @main.route('/')
 def index():
     return render_template('base.html')
