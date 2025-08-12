@@ -38,7 +38,8 @@ def evaluate_attitude(form):
 def submit():
     form = request.form
 
-    user_type = analyze_behavior(form)
+    user_type = analyze_behavior(form)  # 这是代码名，例如 "social_user"
+    user_type_label = USER_TYPE_LABELS.get(user_type, user_type)  # 可读名
 
     attitude_score, attitude_level, risk_bias = evaluate_attitude(form)
 
@@ -46,12 +47,16 @@ def submit():
     session["attitude_score"] = attitude_score
     session["attitude_level"] = attitude_level
     session["risk_bias"] = risk_bias
+    session["user_type"] = user_type  # 后面测验要用代码名
 
-    return render_template('result.html',
-                           result=user_type,
-                           attitude_score=attitude_score,
-                           attitude_level=attitude_level,
-                           risk_bias=risk_bias)
+    return render_template(
+        'result.html',
+        result=user_type,                # 代码名（后续隐藏域要用它）
+        user_type_label=user_type_label, # 可读名（显示用）
+        attitude_score=attitude_score,
+        attitude_level=attitude_level,
+        risk_bias=risk_bias
+    )
 
 @main.route('/quiz', methods=['POST'])
 def quiz():
@@ -80,6 +85,7 @@ def submit_quiz():
     # ✅ 分析分数 + 构建用户画像
     topic_scores, raw_scores = evaluate_knowledge(answers, questions, user_type)
     profile = build_user_profile(topic_scores, raw_scores, user_type)
+    profile["user_type_label"] = USER_TYPE_LABELS.get(profile["user_type"], profile["user_type"])
     priority_scores = compute_priority_scores(
     raw_scores=profile["raw_scores"],
     weights=profile["profile_weights"],
