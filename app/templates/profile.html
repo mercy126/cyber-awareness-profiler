@@ -172,22 +172,36 @@
 
   <script>
     const labels = JSON.parse('{{ profile.scores.keys() | list | tojson | safe }}');
-    const data = JSON.parse('{{ profile.scores.values() | list | tojson | safe }}');
+const data = JSON.parse('{{ profile.scores.values() | list | tojson | safe }}');
 
-    const ctx = document.getElementById('radarChart').getContext('2d');
-    const chart = new Chart(ctx, {
-      type: 'radar',
-      data: {
-        labels: labels,
-        datasets: [{
-          label: 'Knowledge Score (0–1)',
-          data: data,
-          fill: true,
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
-          borderColor: 'rgba(54, 162, 235, 1)',
-          pointBackgroundColor: 'rgba(54, 162, 235, 1)'
-        }]
+// 基准值（可调整）
+const BASELINE_VALUE = 0.6;
+const baseline = new Array(labels.length).fill(BASELINE_VALUE);
+
+const ctx = document.getElementById('radarChart').getContext('2d');
+const chart = new Chart(ctx, {
+  type: 'radar',
+  data: {
+    labels: labels,
+    datasets: [
+      {
+        label: 'Your Score',
+        data: data,
+        fill: true,
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        pointBackgroundColor: 'rgba(54, 162, 235, 1)'
       },
+      {
+        label: 'Baseline',
+        data: baseline,
+        fill: false,
+        borderColor: 'rgba(200, 200, 200, 1)',
+        borderDash: [5, 5],
+        pointRadius: 0
+      }
+    ]
+  },
       options: {
         responsive: true,
         scales: {
@@ -197,7 +211,7 @@
             ticks: { stepSize: 0.2 }
           }
         },
-        plugins: { legend: { display: false } }
+        plugins: { legend: { display: true } }
       }
     });
 
