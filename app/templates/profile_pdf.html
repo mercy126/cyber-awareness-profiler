@@ -4,99 +4,85 @@
   <meta charset="utf-8">
   <title>Cybersecurity Profile Report</title>
   <style>
-    body {
-      font-family: "Helvetica", "Arial", sans-serif;
-      padding: 40px;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 28px;
-      color: #2c3e50;
-      border-bottom: 2px solid #3498db;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      font-size: 20px;
-      color: #34495e;
-      margin-top: 25px;
-      margin-bottom: 10px;
-    }
-
-    .section {
-      margin-bottom: 30px;
-    }
-
-    ul {
-      padding-left: 1.5em;
-    }
-
-    li {
-      margin-bottom: 5px;
-    }
-
-    .label {
-      font-weight: bold;
-    }
-
-    .chart-img {
-      display: block;
-      margin: 20px auto;
-      max-width: 400px;
-      border: 1px solid #ccc;
-    }
-
-    .card {
-      border-left: 5px solid #2980b9;
-      background: #f9fbff;
-      padding: 15px 20px;
-      margin-bottom: 15px;
-      border-radius: 6px;
-    }
-
-    .footer {
-      text-align: right;
-      margin-top: 40px;
-      font-size: 12px;
-      color: #888;
-    }
+    body { font-family: "Helvetica","Arial",sans-serif; padding:40px; color:#333; line-height:1.6; }
+    h1 { text-align:center; font-size:28px; color:#2c3e50; border-bottom:2px solid #3498db; padding-bottom:10px; margin-bottom:30px; }
+    h2 { font-size:20px; color:#34495e; margin:25px 0 10px; }
+    .section { margin-bottom:28px; }
+    .muted { color:#888; font-size:13px; }
+    .chart-img { display:block; margin:16px auto; max-width:420px; border:1px solid #ddd; }
+    .grid { width:100%; border-collapse:collapse; }
+    .grid th, .grid td { border:1px solid #e6e6e6; padding:8px 10px; font-size:14px; }
+    .grid th { background:#f6f9fc; text-align:left; }
+    .card { border-left:5px solid #2980b9; background:#f9fbff; padding:14px 16px; margin-bottom:12px; border-radius:6px; }
+    .badge { display:inline-block; padding:2px 8px; border-radius:10px; font-weight:bold; font-size:12px; color:#fff; }
+    .p1{background:#e74c3c;} .p2{background:#e67e22;} .p3{background:#f1c40f; color:#333;}
+    .p4{background:#2ecc71;} .p5{background:#95a5a6;}
+    .kpi { display:inline-block; padding:6px 10px; background:#f6f9fc; border:1px solid #e6e6e6; border-radius:6px; margin-right:8px; }
+    .footer { text-align:right; margin-top:32px; font-size:12px; color:#888; }
   </style>
 </head>
 <body>
 
   <h1>Cybersecurity Profile Report</h1>
 
+  {% set BASELINE = 0.70 %}
+  {% set BLIND_THRESHOLD = 0.60 %}
+
   <div class="section">
     <h2>User Type</h2>
-    <p>{{ profile.user_type }}</p>
+    <p>{{ profile.user_type_label or profile.user_type }}</p>
   </div>
 
   <div class="section">
     <h2>Security Attitude</h2>
-    <p>Level: {{ profile.attitude_level }}</p>
-    <p>Risk Tendency: {{ profile.risk_bias }}</p>
+    <p><strong>Level:</strong> {{ profile.attitude_level }}</p>
+    <p><strong>Risk Tendency:</strong> {{ profile.risk_bias }}</p>
+    <p class="muted">This reflects self-reported willingness to take precautions and perceptions of risk.</p>
   </div>
 
   <div class="section">
-    <h2>Radar Chart</h2>
+    <h2>Radar Chart (Your Score vs. Baseline)</h2>
     {% if chart_data %}
       <img class="chart-img" src="{{ chart_data }}">
+      <p class="muted">Baseline reference is {{ '%.2f' % BASELINE }} for each topic in the chart.</p>
     {% else %}
       <p>[Radar chart unavailable]</p>
     {% endif %}
   </div>
 
   <div class="section">
-    <h2>Knowledge Scores</h2>
-    <ul>
-      {% for k, v in profile.scores.items() %}
-        <li><span class="label">{{ k }}:</span> {{ v }}</li>
-      {% endfor %}
-    </ul>
+    <h2>Knowledge Scores (with Baseline & Δ)</h2>
+    <table class="grid">
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th>Your Score (0–1)</th>
+          <th>Baseline</th>
+          <th>Δ (You − Baseline)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for topic, val in profile.scores.items() %}
+          {% set delta = (val - BASELINE) %}
+          <tr>
+            <td>{{ topic }}</td>
+            <td>{{ '%.2f' % val }}</td>
+            <td>{{ '%.2f' % BASELINE }}</td>
+            <td>{{ ('+' if delta>=0 else '') ~ ('%.2f' % delta) }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p class="muted">Positive Δ means you are above the baseline; negative Δ means you are below it.</p>
+  </div>
+
+  <div class="section">
+    <h2>Explainability</h2>
+    <span class="kpi">Cosine Similarity: <strong>{{ profile.cosine_similarity }}</strong></span>
+    <span class="kpi">Pearson Correlation: <strong>{{ profile.pearson_correlation }}</strong></span>
+    <p class="muted">
+      Cosine: structural alignment between what you know and what’s important; Pearson: whether your focus matches the priority topics.
+    </p>
   </div>
 
   <div class="section">
@@ -107,31 +93,63 @@
           <li>{{ topic }}</li>
         {% endfor %}
       </ul>
+      <p class="muted">A “blind spot” is any topic where your score &lt; {{ '%.2f' % BLIND_THRESHOLD }}.</p>
     {% else %}
       <p>No major blind spots detected.</p>
     {% endif %}
   </div>
 
+  {% if profile.priority_scores %}
+  <div class="section">
+    <h2>Priority Scores (Higher = More Urgent)</h2>
+    <table class="grid">
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th>Priority Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for topic, val in profile.priority_scores.items() %}
+        <tr>
+          <td>{{ topic }}</td>
+          <td>{{ '%.2f' % val }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p class="muted">Computed from: low raw score, topic weight, and blind-spot flag.</p>
+  </div>
+  {% endif %}
+
   <div class="section">
     <h2>AI Recommendations</h2>
-    {% for rec in profile.recommendations %}
-      <div class="card">
-        <p><strong>{{ loop.index }}. {{ rec.text }}</strong></p>
-        {% if rec.reason %}
-          <p><em>Reason:</em> {{ rec.reason }}</p>
-        {% endif %}
-        {% if rec.priority %}
-          <p><em>Priority:</em> {{ rec.priority }}</p>
-        {% endif %}
-        {% if rec.link %}
-          <p><em>Link:</em> {{ rec.link }}</p>
-        {% endif %}
-      </div>
-    {% endfor %}
+    {% if profile.summary %}
+      <p><strong>Summary:</strong> {{ profile.summary }}</p>
+    {% endif %}
+
+    {% if profile.recommendations %}
+      {% for rec in profile.recommendations %}
+        {% set p = rec.priority or 3 %}
+        <div class="card">
+          <p><strong>{{ loop.index }}. {{ rec.text }}</strong>
+            &nbsp;<span class="badge p{{ p }}">Priority {{ p }}</span>
+          </p>
+          {% if rec.reason %}
+            <p><em>Reason:</em> {{ rec.reason }}</p>
+          {% endif %}
+          {% if rec.link %}
+            <p><em>Link:</em> {{ rec.link }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No recommendations available.</p>
+    {% endif %}
   </div>
 
   <div class="footer">
-  Generated on: {{ generated_time }}
+    Generated on: {{ generated_time }}
   </div>
 </body>
 </html>
