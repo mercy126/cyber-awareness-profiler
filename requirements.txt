@@ -1,0 +1,40 @@
+# --- Flask Web Framework ---
+Flask==3.1.1
+Flask-WTF==1.2.2         # Web forms
+Flask-Bootstrap==3.3.7.1 # Optional styling helpers
+Werkzeug==3.1.3
+Jinja2==3.1.6
+
+# --- Database (if needed) ---
+Flask-SQLAlchemy==3.1.1
+SQLAlchemy==2.0.41
+
+# --- Data Processing ---
+numpy==2.2.6
+pandas==2.3.0
+python-dateutil==2.9.0.post0
+pytz==2025.2
+tzdata==2025.2
+
+# --- Machine Learning / Scoring ---
+scikit-learn==1.7.0
+scipy==1.15.3
+joblib==1.5.1
+threadpoolctl==3.6.0
+
+# --- Visualization ---
+matplotlib==3.10.3
+wordcloud==1.9.4
+plotly==6.1.2
+
+# --- PDF Export ---
+pdfkit==1.0.0
+pillow==11.2.1
+
+# --- AI API Integration ---
+openai==1.97.1
+python-dotenv==1.1.1
+
+# --- Utilities ---
+tqdm==4.67.1
+packaging==25.0
