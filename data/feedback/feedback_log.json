@@ -1,0 +1,90 @@
+[
+  {
+    "submitted_at": "2025-08-19 15:53:57",
+    "user_type": "social_user",
+    "blind_spots": "Password management,2FA authentication,Phishing Awareness,Security Attitude,Content Visibility Awareness",
+    "comment": "",
+    "feedback": [
+      {
+        "recommendation": "Enhance your phishing awareness by learning to recognize suspicious emails and messages, which can protect you from scams and identity theft.",
+        "user_rating": "helpful"
+      },
+      {
+        "recommendation": "Enable Two-Factor Authentication (2FA) on all your accounts to add an extra layer of security, making it harder for unauthorized users to access your personal information.",
+        "user_rating": "confusing"
+      },
+      {
+        "recommendation": "Increase your content visibility awareness by regularly reviewing your social media privacy settings, ensuring that you share information only with intended audiences.",
+        "user_rating": "known"
+      },
+      {
+        "recommendation": "Improve your general security attitude by adopting a more proactive approach to online safety, such as staying informed about the latest security threats.",
+        "user_rating": "helpful"
+      }
+    ]
+  },
+  {
+    "submitted_at": "2025-08-19 15:59:09",
+    "user_type": "social_user",
+    "blind_spots": "Content Visibility Awareness",
+    "comment": "",
+    "feedback": [
+      {
+        "recommendation": "Enhance your awareness of phishing scams by familiarizing yourself with common tactics used by attackers.",
+        "user_rating": "helpful"
+      },
+      {
+        "recommendation": "Activate two-factor authentication on all platforms where it's available to add an extra layer of security.",
+        "user_rating": "helpful"
+      },
+      {
+        "recommendation": "Increase your content visibility awareness by reviewing and understanding privacy settings on your social media accounts.",
+        "user_rating": "helpful"
+      }
+    ]
+  },
+  {
+    "submitted_at": "2025-08-19 15:59:19",
+    "user_type": "social_user",
+    "blind_spots": "Content Visibility Awareness",
+    "comment": "",
+    "feedback": [
+      {
+        "recommendation": "Enhance your awareness of phishing scams by familiarizing yourself with common tactics used by attackers.",
+        "user_rating": "helpful"
+      },
+      {
+        "recommendation": "Activate two-factor authentication on all platforms where it's available to add an extra layer of security.",
+        "user_rating": "helpful"
+      },
+      {
+        "recommendation": "Increase your content visibility awareness by reviewing and understanding privacy settings on your social media accounts.",
+        "user_rating": "helpful"
+      }
+    ]
+  },
+  {
+    "submitted_at": "2025-08-19 16:04:51",
+    "user_type": "content_creator",
+    "blind_spots": "Content Backup",
+    "comment": "",
+    "feedback": [
+      {
+        "recommendation": "Enhance your content backup practices by scheduling regular automatic backups to a secure cloud service.",
+        "user_rating": "helpful"
+      },
+      {
+        "recommendation": "Improve password management by using a reputable password manager to generate and store strong, unique passwords.",
+        "user_rating": "helpful"
+      },
+      {
+        "recommendation": "Keep using two-factor authentication (2FA) consistently across all platforms to enhance your account security.",
+        "user_rating": "helpful"
+      },
+      {
+        "recommendation": "Stay informed about phishing tactics by subscribing to a cybersecurity newsletter.",
+        "user_rating": "helpful"
+      }
+    ]
+  }
+]

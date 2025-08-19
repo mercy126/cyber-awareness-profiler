@@ -1,0 +1,71 @@
+{
+  "user_type": "content_creator",
+  "scores": {
+    "Password Management": 0.64,
+    "2FA Authentication": 0.84,
+    "Phishing Awareness": 1.0,
+    "Content Backup": 0.572,
+    "Copyright Protection": 1.0,
+    "Content Sharing Permissions": 1.0
+  },
+  "raw_scores": {
+    "Password Management": 0.64,
+    "2FA Authentication": 0.84,
+    "Phishing Awareness": 1.008,
+    "Content Backup": 0.572,
+    "Copyright Protection": 1.26,
+    "Content Sharing Permissions": 1.008
+  },
+  "profile_weights": {
+    "Password management": 1.0,
+    "2FA authentication": 1.2,
+    "Phishing Awareness": 1.2,
+    "Content Backup": 1.3,
+    "Copyright Protection": 1.5,
+    "Content Sharing Permissions": 1.2
+  },
+  "blind_spots": [
+    "Content Backup"
+  ],
+  "cosine_similarity": 0.978,
+  "pearson_correlation": 0.57,
+  "summary": "The user demonstrates strong awareness in phishing and copyright protection but needs improvement in content backup and password management.",
+  "recommendations": [
+    {
+      "text": "Enhance your content backup practices by scheduling regular automatic backups to a secure cloud service.",
+      "reason": "Your content backup score indicates a need for better data security measures to prevent data loss.",
+      "link": "https://www.backupguide.com",
+      "priority": 1
+    },
+    {
+      "text": "Improve password management by using a reputable password manager to generate and store strong, unique passwords.",
+      "reason": "Your password management score suggests a vulnerability that can be mitigated by strengthening your password practices.",
+      "link": "https://www.passwordmanager.com",
+      "priority": 1
+    },
+    {
+      "text": "Keep using two-factor authentication (2FA) consistently across all platforms to enhance your account security.",
+      "reason": "Maintaining a high level of security through 2FA is crucial in protecting your accounts from unauthorized access.",
+      "link": "https://www.2faguide.com",
+      "priority": 2
+    },
+    {
+      "text": "Stay informed about phishing tactics by subscribing to a cybersecurity newsletter.",
+      "reason": "Your excellent phishing awareness is a strength; staying updated will help you maintain this advantage.",
+      "link": "https://www.cybersecuritynews.com",
+      "priority": 3
+    }
+  ],
+  "user_type_label": "Content Creator",
+  "priority_scores": {
+    "Password Management": 1.36,
+    "2FA Authentication": 1.16,
+    "Phishing Awareness": 1.192,
+    "Content Backup": 2.728,
+    "Copyright Protection": 1.24,
+    "Content Sharing Permissions": 1.192
+  },
+  "attitude_score": 3.6,
+  "attitude_level": "generally",
+  "risk_tendency": "moderately defensive"
+}

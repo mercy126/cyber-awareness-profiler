@@ -186,7 +186,7 @@ def submit_feedback():
         "feedback": feedback_list
     }
 
-    feedback_file = "data/feedback_log.json"
+    feedback_file = "data/feedback/feedback_log.json"
     os.makedirs("data", exist_ok=True)
 
     if os.path.exists(feedback_file):

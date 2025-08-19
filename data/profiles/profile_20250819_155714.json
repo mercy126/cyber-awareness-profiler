@@ -1,0 +1,65 @@
+{
+  "user_type": "social_user",
+  "scores": {
+    "Password management": 0.64,
+    "2FA authentication": 1.0,
+    "Phishing Awareness": 0.745,
+    "Security Attitude": 0.768,
+    "Privacy Control": 1.0,
+    "Content Visibility Awareness": 0.572
+  },
+  "raw_scores": {
+    "Password management": 0.64,
+    "2FA authentication": 1.008,
+    "Phishing Awareness": 0.745,
+    "Security Attitude": 0.768,
+    "Privacy Control": 1.26,
+    "Content Visibility Awareness": 0.572
+  },
+  "profile_weights": {
+    "Password management": 1.0,
+    "2FA authentication": 1.2,
+    "Phishing Awareness": 1.3,
+    "Security Attitude": 1.2,
+    "Privacy Control": 1.5,
+    "Content Visibility Awareness": 1.3
+  },
+  "blind_spots": [
+    "Content Visibility Awareness"
+  ],
+  "cosine_similarity": 0.976,
+  "pearson_correlation": 0.625,
+  "summary": "The user has a solid understanding of privacy control and 2FA authentication but needs improvement in content visibility awareness.",
+  "recommendations": [
+    {
+      "text": "Enhance your awareness of phishing scams by familiarizing yourself with common tactics used by attackers.",
+      "reason": "Phishing awareness is crucial as attackers often use deception to steal your sensitive information. Improving this can help protect your personal data.",
+      "link": "https://www.phishing.org/what-is-phishing",
+      "priority": 1
+    },
+    {
+      "text": "Activate two-factor authentication on all platforms where it's available to add an extra layer of security.",
+      "reason": "While you already have a good understanding of 2FA, ensuring it's enabled everywhere possible will significantly reduce the risk of unauthorized access.",
+      "link": "https://www.turnon2fa.com/",
+      "priority": 2
+    },
+    {
+      "text": "Increase your content visibility awareness by reviewing and understanding privacy settings on your social media accounts.",
+      "reason": "You need to be more aware of who can see your content online to prevent oversharing information that could be used maliciously.",
+      "link": "https://staysafeonline.org/stay-safe-online/protect-your-personal-information/social-media",
+      "priority": 3
+    }
+  ],
+  "user_type_label": "Social User",
+  "priority_scores": {
+    "Password management": 1.36,
+    "2FA authentication": 1.192,
+    "Phishing Awareness": 1.555,
+    "Security Attitude": 1.432,
+    "Privacy Control": 1.24,
+    "Content Visibility Awareness": 2.728
+  },
+  "attitude_score": 3.0,
+  "attitude_level": "generally",
+  "risk_tendency": "moderately defensive"
+}

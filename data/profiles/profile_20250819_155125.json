@@ -1,0 +1,75 @@
+{
+  "user_type": "social_user",
+  "scores": {
+    "Password management": 0.44,
+    "2FA authentication": 0.528,
+    "Phishing Awareness": 0.485,
+    "Security Attitude": 0.288,
+    "Privacy Control": 0.66,
+    "Content Visibility Awareness": 0.312
+  },
+  "raw_scores": {
+    "Password management": 0.44,
+    "2FA authentication": 0.528,
+    "Phishing Awareness": 0.485,
+    "Security Attitude": 0.288,
+    "Privacy Control": 0.66,
+    "Content Visibility Awareness": 0.312
+  },
+  "profile_weights": {
+    "Password management": 1.0,
+    "2FA authentication": 1.2,
+    "Phishing Awareness": 1.3,
+    "Security Attitude": 1.2,
+    "Privacy Control": 1.5,
+    "Content Visibility Awareness": 1.3
+  },
+  "blind_spots": [
+    "Password management",
+    "2FA authentication",
+    "Phishing Awareness",
+    "Security Attitude",
+    "Content Visibility Awareness"
+  ],
+  "cosine_similarity": 0.971,
+  "pearson_correlation": 0.473,
+  "summary": "The user has a relatively low security attitude and needs significant improvement in phishing awareness, 2FA authentication, and content visibility awareness.",
+  "recommendations": [
+    {
+      "text": "Enhance your phishing awareness by learning to recognize suspicious emails and messages, which can protect you from scams and identity theft.",
+      "reason": "Phishing awareness is crucial as it prevents you from falling victim to fraudulent schemes. Your current low score indicates a high risk of being tricked by phishing attempts.",
+      "link": "https://www.phishing.org/what-is-phishing",
+      "priority": 1
+    },
+    {
+      "text": "Enable Two-Factor Authentication (2FA) on all your accounts to add an extra layer of security, making it harder for unauthorized users to access your personal information.",
+      "reason": "2FA significantly enhances account security by requiring a second form of verification. Your relatively low score suggests you might not be fully utilizing this feature.",
+      "link": "https://www.google.com/landing/2step/",
+      "priority": 2
+    },
+    {
+      "text": "Increase your content visibility awareness by regularly reviewing your social media privacy settings, ensuring that you share information only with intended audiences.",
+      "reason": "Being aware of who can see your online content is crucial for maintaining privacy. Your score indicates that you may not be fully aware of how visible your content is to others.",
+      "link": "https://www.consumer.ftc.gov/articles/how-manage-your-online-privacy-settings",
+      "priority": 3
+    },
+    {
+      "text": "Improve your general security attitude by adopting a more proactive approach to online safety, such as staying informed about the latest security threats.",
+      "reason": "A low security attitude score suggests a need to be more vigilant and proactive about online safety, which can reduce the risk of various cyber threats.",
+      "link": "https://staysafeonline.org/resources/",
+      "priority": 4
+    }
+  ],
+  "user_type_label": "Social User",
+  "priority_scores": {
+    "Password management": 2.56,
+    "2FA authentication": 2.672,
+    "Phishing Awareness": 2.815,
+    "Security Attitude": 2.912,
+    "Privacy Control": 1.84,
+    "Content Visibility Awareness": 2.988
+  },
+  "attitude_score": 2.8,
+  "attitude_level": "relatively low",
+  "risk_tendency": "low vigilance type"
+}
